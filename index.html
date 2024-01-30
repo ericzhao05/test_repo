@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang + "en">
+    <head>
+        <meta cahrset = "utf-8" />
+        <meta name="viewport" content="width=device=width, initial-scale = 1" />
+        <title>HTML Forms and Input</title>
+    </head>
+    <body>
+        <!-- command + foward slash to comment -->
+        <!-- target="_blank" : opens the link in a new tab -->
+        <p>
+            Here is a form containing basic input types. For more information see
+            <a href = "https://www.w3schools.com/html/" target="_blank">W3 Schools</a>
+        </p>
+        <!-- The form action usually contains a file to process the form data, it could local like a contact.php
+        or it could be a thir d party API. The action is what we want to do with it -->
+    <form action="#" method="POST" name="sampleForm">
+        <fieldset>
+            <legend>Simple Text Input</legend>
+            <p>The box and title are created by using the fieldset and legend tags</p>
+            <label for="FirstName">First Name</label>
+            <input name="FirstName" type="text" required/>
+            <p>This text iput has a max length and placeholder text.</p>
+            <label for="LastName">Last Name</label>
+            <input 
+            name="LastName" 
+            type="text" 
+            placeholder="LastName" 
+            maxlength="15"/>
+            <br/><br/>
+            <label for="age">Your age:</label>
+            <input name="age" type="number" min="0" max="100"/>
+            <br/><br/>
+            <label for="password">Choose Password:</label>
+            <input name="password" type="password"/>
+        </fieldset>
+    </form>
+        <br/>
+        <fieldset>
+            <legend>Textarea tag</legend>
+            <p>Text area tags are great for lonegr text answers, like sentences or paragraphs</p>
+            <label for="WhyIDM">Why IDM?</label>
+            <textarea name="WhyIDM" cols="50" rows="10"></textarea>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>
+                Check Boxes
+            </legend>
+            <p>Check boxes allows the user to select more than just one options at once.
+                Checkboxes in the same group have the same name, but different values!
+            </p>
+            <label for="Pet">What pet do you have?</label> 
+            <br/>
+            <!-- Make sure value are what is shown are the same -->
+            <input type="checkbox" name="Pet" value="Dog" /> Dog
+            <br/>
+            <input type="checkbox" name="Pet" value="Cat" /> Cat
+            <br/>
+            <input type="checkbox" name="Pet" value="Chicken" /> Chicken
+            <br/>
+            <input type="checkbox" name="Pet" value="Snake" /> Snake
+            <br/>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>
+                Radio Buttons
+            </legend>
+            <p>Radio Buttons allows the user to select one options per group.
+                Radio Buttons in the same group have the same name, but different values!
+            </p>
+            <label for="Pet">What is your favorite pet?</label> 
+            <br/>
+            <!-- Make sure value are what is shown are the same -->
+            <input type="radio" name="Pet" value="Dog" /> Dog
+            <br/>
+            <input type="radio" name="Pet" value="Cat" /> Cat
+            <br/>
+            <input type="radio" name="Pet" value="Chicken" /> Chicken
+            <br/>
+            <input type="radio" name="Pet" value="Snake" /> Snake
+            <br/>
+        </fieldset>
+        <br/>
+        <fieldset>
+            <legend>
+                Select Options
+            </legend>
+            <p>Using the select and option tag, you can add items to a dropdown manu.</p>
+            <label for="State">Pick a State!</label>
+            <br/>
+            <select name="State">
+                <option value="NH">New Hampshire</option>
+                <option value="NY">New York</option>
+                <option value="NM">New Mexico</option>
+                <option value="NJ">New Jersey</option>
+            </select>
+        </fieldset>
+        <p>Finally, we use a button to submit pur form</p>
+        <input name="Submit" value="submit" type="button" />
+        <button role="button">Contact Us!</button>
+    </body>
+</html>
